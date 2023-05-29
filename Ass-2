@@ -1,0 +1,35 @@
+//PROGRAM TO INSERT AN ELEMENT IN AN ARRAY//
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	int a[50],n,ele,pos,i;
+	printf("Enter size of an array:\n");
+	scanf("%d",&n);
+	printf("Enter elements of an array:\n");
+	for(i=0;i<n;i++)
+{
+	scanf("%d",&a[i]);
+}
+printf("Enter the position where you want to insert:\n");
+scanf("%d",&pos);
+printf("Enter the element of an array:\n");
+scanf("%d",&ele);
+if(pos>=0&&pos<n)
+{
+for(i=n-1;i>=pos;i--)
+{
+	a[i+1]=a[i];
+}
+a[pos]=ele;
+printf("The elements of an array after insertion are:\n");
+for(i=0;i<=n;i++)
+{
+	printf("%d ",a[i]);
+}
+}
+else{
+	printf("Out of bounds!!!");
+}
+return 0;
+}
